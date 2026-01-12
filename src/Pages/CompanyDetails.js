@@ -18,7 +18,7 @@ export default function CompanyDetails() {
         <div className="card-body">
           <h3 className="text-primary">{company.companyName}</h3>
           <p><strong>Address:</strong> {company.address}</p>
-          <p><strong>Pincode:</strong> {company.pincode}</p>
+          <p><strong>Pincode:</strong> {company.pinCode}</p>
         </div>
       </div>
     </div>

@@ -62,20 +62,18 @@ export default function Dashboard() {
       </div>
 
       {/* ===== EMPLOYEE TABLE ===== */}
-      <div className="card shadow">
+      <div className="card shadow mt-5">
         <div className="card-header">
-          <h5 className="mb-0">Employees</h5>
+          <h5 className="mb-0">Employees List</h5>
         </div>
 
         <div className="card-body p-0">
-          <table className="table mb-0">
+          <table className="table table-hover mb-0 text-center">
             <thead className="table-secondary text-center">
               <tr>
-                <th>Name</th>
+                <th>Employee Name</th>
                 <th>Email</th>
-                <th>Role</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th>Designation</th>
               </tr>
             </thead>
 
@@ -83,28 +81,9 @@ export default function Dashboard() {
               {currentEmployees.length > 0 ? (
                 currentEmployees.map((emp) => (
                   <tr key={emp.id}>
-                    <td>{emp.name}</td>
+                    <td>{emp.fullName}</td>
                     <td>{emp.email}</td>
-                    <td>{emp.role}</td>
-                    <td>
-                      <span
-                        className={
-                          emp.status === "Completed"
-                            ? "badge bg-success"
-                            : "badge bg-warning text-dark"
-                        }
-                      >
-                        {emp.status}
-                      </span>
-                    </td>
-                    <td>
-                      <button className="btn btn-sm btn-warning me-2">
-                        Edit
-                      </button>
-                      <button className="btn btn-sm btn-danger">
-                        Delete
-                      </button>
-                    </td>
+                    <td>{emp.designation}</td>
                   </tr>
                 ))
               ) : (
